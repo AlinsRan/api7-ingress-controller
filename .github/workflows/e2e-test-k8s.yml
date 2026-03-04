@@ -101,7 +101,7 @@ jobs:
       - name: Run E2E test suite
         shell: bash
         env:
-          API7_EE_LICENSE: ${{ secrets.API7_EE_LICENSE }}
+          #API7_EE_LICENSE: ${{ secrets.API7_EE_LICENSE }}
           PROVIDER_TYPE: api7ee
           TEST_LABEL: ${{ matrix.cases_subset }}
           INGRESS_VERSION: v1beta1
