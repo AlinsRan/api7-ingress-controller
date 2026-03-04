@@ -47,7 +47,7 @@ jobs:
 
       - name: Install kind
         run: |
-          go install sigs.k8s.io/kind@v0.13.0
+          kind version
 
       - name: Install Helm
         run: |
@@ -57,7 +57,7 @@ jobs:
 
       - name: Launch Kind Cluster
         env:
-          KIND_NODE_IMAGE: kindest/node:v1.18.20@sha256:38a8726ece5d7867fb0ede63d718d27ce2d41af519ce68be5ae7fcca563537ed
+          KIND_NODE_IMAGE: kindest/node:v1.18.15
         run: |
           make kind-up
 
